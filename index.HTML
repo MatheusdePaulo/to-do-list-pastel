@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <title>Minha To Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="topbar">
+      <div>
+        <h1>Minha To Do List</h1>
+        <p class="subtitle">Organize suas tarefas do dia</p>
+      </div>
+      <div class="counter" id="taskCounter">0 tarefas</div>
+    </section>
+
+    <section class="input-card">
+      <label class="label" for="taskInput">Adicionar tarefa</label>
+
+      <div class="input-wrap">
+        <input
+          id="taskInput"
+          type="text"
+          maxlength="60"
+          placeholder="Digite sua tarefa"
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="meta-row">
+        <span class="hint" id="charCount">0/60 caracteres</span>
+        <span class="error" id="errorMsg"></span>
+      </div>
+
+      <button class="add-btn" id="addTaskBtn">Adicionar</button>
+    </section>
+
+    <section class="toolbar">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="pending">Pendentes</button>
+        <button class="filter-btn" data-filter="completed">Concluídas</button>
+      </div>
+
+      <button class="clear-btn" id="clearCompletedBtn">Limpar concluídas</button>
+    </section>
+
+    <p class="section-title" id="sectionTitle">Tarefas</p>
+    <section class="task-list" id="taskList"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
