@@ -66,6 +66,11 @@ function addTask() {
     const rawText = taskInput.value;
     const formattedText = capitalizeFirstLetter(rawText);
 
+    if (tasks.length >= 10) {
+        showError('Você não pode adicionar mais de 10 tarefas.');
+        return;
+    }
+
     if (!formattedText) {
         showError('Digite uma tarefa antes de adicionar.');
         return;
