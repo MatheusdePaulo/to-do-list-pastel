@@ -305,9 +305,9 @@ body {
     border: none;
     background: #c25f5c;
     color: #ffffff;
-    font-size: 0.91rem;
-    font-weight: 600;
-    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 11px;
     padding: 10px 14px;
     cursor: pointer;
     transition: transform 0.15s ease, opacity 0.15s ease;
