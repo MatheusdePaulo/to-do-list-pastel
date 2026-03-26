@@ -2,21 +2,22 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-  />
-  <title>Minha To Do List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To Do List Pastel</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <main class="app">
   <section class="topbar">
-    <div>
+    <div class="topbar-left">
       <h1>Minha To Do List</h1>
       <p class="subtitle">Organize suas tarefas do dia</p>
     </div>
-    <div class="counter" id="taskCounter">0 tarefas</div>
+
+    <div class="topbar-right">
+      <div class="counter" id="taskCounter">0 tarefas</div>
+      <button class="clear-btn" id="clearTasksBtn">Limpar tarefas</button>
+    </div>
   </section>
 
   <section class="input-card">
@@ -40,19 +41,15 @@
     <button class="add-btn" id="addTaskBtn">Adicionar</button>
   </section>
 
-  <section class="toolbar">
-    <div class="filters">
-      <button type="button" class="filter-btn active" data-filter="all">Todas</button>
-      <button type="button" class="filter-btn" data-filter="pending">Pendentes</button>
-      <button type="button" class="filter-btn" data-filter="completed">Concluídas</button>
-    </div>
-
-    <button type="button" class="clear-btn" id="clearCompletedBtn">
-      Limpar concluídas
-    </button>
+  <section class="filter-bar">
+    <button class="filter-btn active" id="filterAllBtn">Todas</button>
+    <button class="filter-btn" id="filterPendingBtn">Pendentes</button>
+    <button class="filter-btn" id="filterCompletedBtn">Concluídas</button>
   </section>
 
-  <p class="section-title" id="sectionTitle">Tarefas</p>
+  <button class="clear-completed-btn" id="clearCompletedBtn">Limpar concluídas</button>
+
+  <p class="section-title">Tarefas</p>
   <section class="task-list" id="taskList"></section>
 </main>
 
