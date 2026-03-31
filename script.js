@@ -253,30 +253,6 @@ function toggleComplete(id) {
     renderTasks();
 }
 
-function moveTask(id, direction) {
-    const visibleTasks = getFilteredTasks();
-    const visibleIndex = visibleTasks.findIndex(task => task.id === id);
-    if (visibleIndex === -1) return;
-
-    const targetVisibleIndex = direction === "up" ? visibleIndex - 1 : visibleIndex + 1;
-    if (targetVisibleIndex < 0 || targetVisibleIndex >= visibleTasks.length) return;
-
-    const currentTask = visibleTasks[visibleIndex];
-    const targetTask = visibleTasks[targetVisibleIndex];
-
-    if (currentTask.completed !== targetTask.completed) return;
-
-    const fromIndex = tasks.findIndex(task => task.id === currentTask.id);
-    const toIndex = tasks.findIndex(task => task.id === targetTask.id);
-
-    if (fromIndex === -1 || toIndex === -1) return;
-
-    [tasks[fromIndex], tasks[toIndex]] = [tasks[toIndex], tasks[fromIndex]];
-
-    saveTasks();
-    renderTasks();
-}
-
 function startEdit(id) {
     tasks = tasks.map(task => ({
         ...task,
@@ -523,7 +499,6 @@ window.deleteTask = deleteTask;
 window.startEdit = startEdit;
 window.cancelEdit = cancelEdit;
 window.saveEdit = saveEdit;
-window.moveTask = moveTask;
 window.handleDragStart = handleDragStart;
 window.handleDragEnd = handleDragEnd;
 window.handleDragOver = handleDragOver;
