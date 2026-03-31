@@ -483,8 +483,6 @@ function renderTasks() {
               `
                 : `
                 <div class="task-actions">
-                  <button class="action-btn move-btn" onclick="moveTask('${task.id}', 'up')" ${canMoveUp ? "" : "disabled"}>↑</button>
-                  <button class="action-btn move-btn" onclick="moveTask('${task.id}', 'down')" ${canMoveDown ? "" : "disabled"}>↓</button>
                   <button class="action-btn edit-btn" onclick="startEdit('${task.id}')">Editar</button>
                   <button class="action-btn delete-btn" onclick="deleteTask('${task.id}')">Remover</button>
                 </div>
