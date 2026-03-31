@@ -375,10 +375,6 @@ body {
     transform: none;
 }
 
-.move-btn {
-    background: #efe5dd;
-}
-
 .edit-btn {
     background: var(--accent-3);
 }
